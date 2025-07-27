@@ -155,12 +155,46 @@ header {
   padding: 2rem;
 }
 
-.interactive-card {
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
+// .interactive-card {
+//   transition: transform 0.2s, box-shadow 0.2s;
+//   cursor: pointer;
+//   &:hover {
+//     transform: translateY(-8px) scale(1.04);
+//     box-shadow: 0 8px 32px rgba($primary-black, 0.15);
+//     border-color: $primary-color;
+//   }
+// }
+
+.product {
+  
+  
+  .card-img{
+    overflow: hidden;
+    img{
+      border-radius: 10px;
+      transition: scale 0.3s ease-in-out;
+    }
+  }
+
   &:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 32px rgba($primary-black, 0.15);
-    border-color: $primary-color;
+    img{
+      scale: 1.05;
+    }
+  }
+
+  .card-body{
+    padding: 0;
+    a{
+      font-size: 1.2em;
+    }
+    .price{
+      font-size: 1.2em;
+      font-weight: 600;
+      color: $primary-color;
+      span{
+        color:rgba($primary-black, 0.5)
+      }
+    }
+    
   }
 }

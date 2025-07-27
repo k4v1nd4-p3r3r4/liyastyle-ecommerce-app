@@ -10,8 +10,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 import Logo from "../../assets/image/logo-b.png";
-import Banner from "../../assets/image/banner1.png";
-import Banner2 from "../../assets/image/banner2.png";
+
+import LatestProduct from "./LatestProduct";
+import FeturedProduct from "./FeturedProduct";
 
 export const Home = () => {
   return (
@@ -120,33 +121,8 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section-2 py-5">
-        <div className="container p-4">
-          <h2>New Arrivales</h2>
-          <div className="row">
-            {[...Array(12)].map((_, idx) => (
-              <div className="col-6 col-md-3 mb-4" key={idx}>
-                <div className="card interactive-card h-100">
-                  <img
-                    src={`https://picsum.photos/200/200?random=${idx + 1}`}
-                    className="card-img-top"
-                    alt={`Product ${idx + 1}`}
-                    style={{ objectFit: "cover", height: "160px" }}
-                  />
-                  <div className="card-body d-flex flex-column align-items-center">
-                    <h6 className="card-title mb-1">Product {idx + 1}</h6>
-                    <p className="card-text mb-2" style={{ fontSize: "0.85em", color: "#555" }}>
-                      This is a stylish product perfect for your wardrobe.
-                    </p>
-                    <p className="card-text mb-2" style={{ fontSize: "0.9em" }}>$19.99</p>
-                    <Button variant="primary" size="sm">Add to Cart</Button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LatestProduct />
+      <FeturedProduct/>
     </>
   );
 };
